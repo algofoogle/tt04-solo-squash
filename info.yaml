@@ -9,7 +9,7 @@ project:
     - top.v                                 # This is my wrapper to connect the TT interface with my design.
     - lzc_fast.v                            # This is just an experiment included in the design; a leading zero counter with 24-bit input.
     - solo_squash.v                         # My main design HDL is in a git submodule of the src/ dir.
-  top_module: tt_um_algofoogle_solo_squash  # Top module name; must start with "tt_um_". Make it unique by prepending your github username
+  top_module: tt_um_algofoogle_tt04_solo_squash  # Top module name; must start with "tt_um_". Make it unique by prepending your github username
 
 # How many tiles your design occupies? A single tile is about 167x108 uM.
   tiles: "1x1"    # Valid values: 1x1, 1x2, 2x2, 4x2 or 8x2
