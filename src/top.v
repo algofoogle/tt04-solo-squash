@@ -1,6 +1,9 @@
 `default_nettype none
 `timescale 1ns / 1ps
 
+`define DEBUG_OUTPUTS   // Used by solo_squash module to enable extra ports for debugging.
+`define RESET_AL        // Tell solo_squash we want active LOW reset.
+
 module tt_um_algofoogle_tt04_solo_squash(
     // 8 dedicated user inputs:
     input   wire [7:0]  ui_in,
@@ -56,7 +59,7 @@ module tt_um_algofoogle_tt04_solo_squash(
     solo_squash game(
         // --- Inputs ---
         .clk        (clk),
-        .reset      (~rst_n),       // Active HIGH reset needed here.
+        .reset_n    (rst_n),       // Active LOW reset needed here.
         // Active-low control inputs (but pulled low by the chip BY DEFAULT when not pressed, so inverted here):
         .pause_n    (pause_n),
         .new_game_n (new_game_n),

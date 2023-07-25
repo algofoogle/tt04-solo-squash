@@ -7,8 +7,8 @@ project:
 # Source files must be in ./src and you must list each source file separately
   source_files:        
     - top.v                                 # This is my wrapper to connect the TT interface with my design.
+    - src/solo_squash/src/solo_squash.v     # My main design HDL is in a git submodule of the src/ dir.
     - lzc_fast.v                            # This is just an experiment included in the design; a leading zero counter with 24-bit input.
-    - solo_squash.v                         # My main design HDL is in a git submodule of the src/ dir.
   top_module: tt_um_algofoogle_tt04_solo_squash  # Top module name; must start with "tt_um_". Make it unique by prepending your github username
 
 # How many tiles your design occupies? A single tile is about 167x108 uM.
