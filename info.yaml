@@ -107,7 +107,7 @@ documentation:
     current horizontal pixel.
 
     This packed value then has its total number of leading zeroes counted, and output on the
-    lower 5 bits of the bidirectional port (known internally `uio_out[4:0]`), i.e. a number
+    lower 5 bits of the bidirectional port (known internally as `uio_out[4:0]`), i.e. a number
     from 0 to 24. The next bit (`uio_out[5]`) is 1 if the zero count is 24 (i.e. all zeroes).
 
 
